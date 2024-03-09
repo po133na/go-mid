@@ -4,7 +4,7 @@ Our team has made the project dedicated to Animal Shelters. In this project we h
 
  This is the API where people can look for pets they can adopt (full data) and also give up a pet.
 
-There are 3 instances: Shelter, User and Animal. 
+There are 4 instances: Shelter, User, Role and Animal. 
 
 Our team have made a database for pets, containing description data and functional API.   
 
