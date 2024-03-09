@@ -7,19 +7,14 @@ CREATE TABLE IF NOT EXISTS Animals(
 	Description text NOT NULL,
     );
 
-CREATE TABLE IF NOT EXISTS Users(
-    UserID int PRIMARY KEY,
-    User_Email text NOT NULL,
-	Username varchar(30) NOT NULL,
-	Password text NOT NULL,
-    Number_of_phone_user varchar(50) NOT NULL,
-    Profile_Picture_User text NOT NULL
+CREATE TABLE IF NOT EXISTS Shelters(
+    Id          int PRIMARY KEY,
+	Title       varchar(30),
+	Description text,
+	Address     varchar(50),
+	Coordinates varchar(50)
     );
 
-CREATE TABLE IF NOT EXISTS Roles(
-	Role_name  varchar(50) PRIMARY KEY,
-	Permissions text
-);
 	
 CREATE TABLE IF NOT EXISTS Admins(
 	AdminID int PRIMARY KEY,

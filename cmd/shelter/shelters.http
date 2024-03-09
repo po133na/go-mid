@@ -3,12 +3,9 @@ POST localhost:8081/api/v1/animals
 Content-Type: application/json
 
 {
-    ID: "1",
-    Kind_Of_Animal: "Cat", 
-    Kind_Of_Breed: "Siamese", 
-    Name: "Mittens", 
-    Age: "3", 
-    Description: "Playful and affectionate, enjoys chasing toys."
+    "ID": "1",
+    "name": "Mittens", 
+    "age": "3", 
 }
 
 > {%

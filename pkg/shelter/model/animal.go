@@ -25,12 +25,12 @@ type AnimalModel struct {
 func (a AnimalModel) Insert(animal *Animal) error {
 	// check for ID needed here if error
 	query := `
-		INSERT INTO Animals (Kind_Of_Animal, Kind_0f_Breed, Name, Age, Description) 
-		VALUES ($1, $2, $3, $4, $5) 
-		RETURNING id, created_at, updated_at
+		INSERT INTO Animals (Name, Age, Description) 
+		VALUES ($1, $2, $3) 
+		RETURNING id, kind_of_animal, kind_of_breed
 		`
 	// check if its animal of Animals in case of error
-	args := []interface{}{animal.Kind_Of_Animal, animal.Kind_Of_Breed, animal.Name, animal.Age, animal.Description}
+	args := []interface{}{animal.Name, animal.Age, animal.Description}
 	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
 	defer cancel()
 
@@ -40,7 +40,7 @@ func (a AnimalModel) Insert(animal *Animal) error {
 func (a AnimalModel) Get(id int) (*Animal, error) {
 	// Retrieve a specific menu item based on its ID.
 	query := `
-		SELECT id, Kind_Of_Animal, Kind_Of_Breed, Name, Age, Description
+		SELECT ID, Kind_Of_Animal, Kind_Of_Breed, Name, Age, Description
 		FROM Animals
 		WHERE ID = $1
 		`

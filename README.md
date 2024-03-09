@@ -35,6 +35,8 @@ DELETE /animals/:id
 
 ## Instances' Structure
 ```
+
+
 Users
 • UserID (AUTO_INCREMENT PRIMARY KEY)
 • User_Email(TEXT)
