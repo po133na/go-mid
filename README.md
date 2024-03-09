@@ -60,6 +60,6 @@ Admins
 • Number_of_phone_Admin(VARCHAR(50))
 • Role(VARCHAR(255), Type:Back_end, Front_end, G_admin, etc)
 Role
-• NameRole(TEXT)
+• role_name(TEXT)
 • Permissions(TEXT)
 ```
