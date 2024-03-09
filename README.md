@@ -35,7 +35,8 @@ DELETE /animals/:id
 
 ## Instances' Structure
 ```
-
+![Image alt]
+(https://github.com/po133na/go-mid/mip.png)
 
 Users
 • UserID (AUTO_INCREMENT PRIMARY KEY)
